@@ -432,6 +432,106 @@ ul.text-soft li {
     .work-grid { grid-template-columns: 1fr; gap: 4rem; }
 }
 
+
+/* Experience & Education */
+.experience-card {
+    margin-top: 3rem;
+    padding: 4rem;
+    border: 1px solid var(--accent-sage);
+    background: #fafbfc;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.5rem;
+}
+
+.experience-title {
+    font-size: 2rem;
+}
+
+.experience-meta {
+    font-weight: 600;
+    color: var(--accent-gold);
+}
+
+.experience-list {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+}
+
+.education-grid {
+    margin-top: 3rem;
+}
+
+.education-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Why Work With Me */
+.section-why-me {
+    padding: 10rem 0;
+    background: #fafafa;
+    border-radius: 4rem;
+}
+
+.section-heading-main {
+    font-size: 3.5rem;
+    margin-bottom: 5rem;
+    line-height: 1.2;
+}
+
+.value-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+}
+
+.value-item {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.value-number {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent-gold);
+    letter-spacing: 2px;
+}
+
+/* Pricing & Services */
+.section-pricing {
+    padding: 10rem 0;
+}
+
+.category-block {
+    margin-bottom: 8rem;
+}
+
+.category-header {
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    margin-bottom: 3rem;
+    color: var(--text-soft);
+    text-transform: uppercase;
+}
+
+.category-header span {
+    color: var(--accent-gold);
+    margin-right: 10px;
+}
+
+.pricing-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
 /* Project Showcase */
 .projects-grid {
     display: grid;
@@ -538,16 +638,44 @@ ul.text-soft li {
     box-shadow: 0 10px 20px rgba(197, 160, 89, 0.15);
 }
 
-/* New Contact & Footer (Dark Theme for Contrast) */
+/* New Contact & Footer (Light Theme for Cohesion) */
 .footer-new {
-    background: #0a0a0a;
-    color: #fff;
-    padding: 10rem 0 4rem;
+    background: #fafafa;
+    color: var(--text-charcoal);
+    padding: 8rem 0 4rem;
     position: relative;
     overflow: hidden;
+    margin: 0 1rem 1rem 1rem;
+    border-radius: 3rem;
 }
 
 .footer-new .section-label {
+    color: var(--accent-gold);
+    margin-bottom: 2rem;
+}
+
+.footer-new h2 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    line-height: 1.1;
+    color: var(--text-charcoal);
+    font-family: var(--font-serif);
+}
+
+.footer-new h2 span {
+    color: var(--accent-gold);
+    font-style: italic;
+}
+
+.footer-new a {
+    color: var(--text-charcoal);
+    text-decoration: none;
+}
+
+.footer-bottom-new {
+    color: #555;
+    border-top: 1px solid #ddd;
+}
     color: var(--accent-gold);
     margin-bottom: 2rem;
 }
@@ -682,10 +810,20 @@ ul.text-soft li {
         padding: 0 1.5rem;
     }
     
+    .hero-minimal {
+        padding: 15rem 0 5rem 0 !important;
+    }
+    
     .hero-minimal .container {
         grid-template-columns: 1fr !important;
         text-align: center !important;
         gap: 4rem;
+    }
+
+    /* Ensure project cards stack on tablets and mobiles */
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
     }
     
     .hero-text-new {
@@ -732,15 +870,63 @@ ul.text-soft li {
         justify-content: center;
     }
     
-    .hero-text-new h1, .footer-new h2, #skills h2, #projects h2 {
+    .hero-text-new h1, .footer-new h2, #skills h2, #projects h2, .section-heading-main {
         font-size: 2.2rem !important;
     }
     
-    .work-grid, .projects-grid {
+        .work-grid, .value-grid, .pricing-grid-container {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+    .projects-grid {
         grid-template-columns: 1fr !important;
         gap: 3rem !important;
     }
+    #projects h2 {
+        text-align: center !important;
+        margin-bottom: 2rem !important;
+    }
     
+    
+    .experience-card {
+        padding: 2.5rem 1.5rem;
+    }
+    
+    .experience-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+    
+    .experience-title {
+        font-size: 1.6rem;
+    }
+    
+    .section-why-me, .section-pricing, #education {
+        padding: 5rem 1.5rem !important;
+        text-align: center !important;
+    }
+    
+    .section-heading-main {
+        text-align: center !important;
+    }
+    
+    .value-item, .education-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+    
+    .category-block {
+        margin-bottom: 5rem;
+    }
+    
+    .category-header {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
     .footer-grid {
         grid-template-columns: 1fr !important;
         gap: 4rem !important;
@@ -762,7 +948,7 @@ ul.text-soft li {
 }
 
 @media (max-width: 480px) {
-    .hero-text-new h1 {
+    .hero-text-new h1, .section-heading-main {
         font-size: 1.8rem !important;
     }
     
